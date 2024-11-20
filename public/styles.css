@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.recipe-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recipe-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.recipe-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 190px;
+  width: 209px;
+  border-radius: 9.41px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 3.14px 3.14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px); /* Moves card up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds stronger shadow on hover */
+}
+
+.recipe-card__image {
+  width: 208.69px;
+  height: 127px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+  margin-top: 0px;
+}
+
+.recipe-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+  font-size: 15.69px;
+}
+
+.recipe-card__title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.recipe-card__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.recipe-card__button {
+  border: none;
+  height: 19px;
+  width: 77px;
+  font-size: 12.08px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for buttons */
+}
+
+.recipe-card__button--primary {
+  background-color: #1DA1F2;
+  color: #fff;
+  font-size: 10.7px;
+  font-weight: bold;
+  border-radius: 8.15px;
+}
+
+.recipe-card__button--primary:hover {
+  background-color: #0d8ccf; /* Darker shade for primary button on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.recipe-card__button--secondary {
+  background-color: transparent;
+  color: black;
+  border: 1px solid green;
+  border-radius: 10.46px;
+}
+
+.recipe-card__button--secondary:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
